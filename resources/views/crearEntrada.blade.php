@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -43,21 +44,22 @@
                             <h3 class="card-header">Crear Nueva Entrada Directorio</h3>
                             <div class="card-body">
                                 <p class="card-text">
-                                    <form>
+                                    <form action="{{route('agregar.directorio.salvar')}}" method="POST">
+                                        @csrf
                                         <label for="">C&oacute;digo</label>
-                                        <input type="text" name="codigo" class="form-control">
+                                        <input type="text" id="codigoEntrada" name="codigoEntrada" class="form-control" required>
                                         <label for="">Nombre</label>
-                                        <input type="text" name="nombre" class="form-control">
+                                        <input type="text" name="nombre" class="form-control" required>
                                         <label for="">Apellido</label>
-                                        <input type="text" name="apellido" class="form-control">
-                                        <label for="">Tel&eacute;fono</label>
-                                        <input type="text" name="telefono" class="form-control">
+                                        <input type="text" name="apellido" class="form-control" required>
+                                        <label for="">Tel&eacute;fono</label> 
+                                        <input type="text" name="telefono" class="form-control" required>
                                         <label for="">Correo</label>
-                                        <input type="text" name="correo" class="form-control">
+                                        <input type="text" name="correo" class="form-control" required>
                                         
                                         
                                         <button class="btn btn-primary">Guardar</button>
-                                        <a href="#" class="btn btn-info">Regresar</a>
+                                        <a href="{{route('inicio')}}" class="btn btn-info">Regresar</a>
                                         
                                     </form>
                                 </p>
