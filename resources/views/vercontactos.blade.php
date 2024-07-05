@@ -44,11 +44,11 @@
                             <div class="card-body">
                                 <p class="card-text">
                                     <label for="">C&oacute;digo</label>
-                                    <input type="text" class="form-control" readonly>
+                                    <input type="text" class="form-control" value="{{$directorio->codigoEntrada}}" readonly>
                                     <label for="">Nombre</label>
-                                    <input type="text" class="form-control" readonly>
+                                    <input type="text" class="form-control"  value=" {{$directorio->nombre}}">
                                     <label for="">Apellido</label>
-                                    <input type="text" class="form-control" readonly>
+                                    <input type="text" class="form-control" value="{{$directorio->apellido}}" readonly>
 
                                     <p>
                                         <button class="btn btn-primary">Agregar nuevo contacto</button>

@@ -31,8 +31,9 @@ public function buscar(){
 return view('buscar');
 }
 
-public function apellido(){
+public function buscarDirectorio(Request $email){
+$directorio = Directorio::where('correo', $email->correo);
 
-    
+return view('vercontactos',compact('directorio'));
 }
 }

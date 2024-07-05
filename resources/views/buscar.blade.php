@@ -43,12 +43,14 @@
                             <h3 class="card-header">Buscar Entrada</h3>
                             <div class="card-body">
                                 <p class="card-text">
+                                <form action="{{route('busqueda.comppleta')}}" method="POST">
+                                    @csrf
                                     <label for="">Correo</label>
-                                    <input type="text" class="form-control" name ="correo">
+                                    <input id="correo" class="form-control" name ="correo">
                                     <p>
-                                        <a href="#" class="btn btn-success">Buscar</a>
-                                        <a href="#" class="btn btn-info">Regresar</a>
-                                    </p>                                    
+                                        <button class="btn btn-info" type="submit">Buscar</button>
+                                        <a href="{{route('inicio')}}" class="btn btn-info">Regresar</a>
+                                    </p>    </form>                                
                                 </p>
                             </div>
                         </div>
