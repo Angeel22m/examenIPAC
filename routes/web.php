@@ -18,4 +18,4 @@ Route::post('/inicio/agregar/directorio/salvar',
 Route::get('inicio/buscar/directorio', 
 [ContactosController::class,'buscar'])->name('buscar.directorio');
 
-Route::post('/inicio/buscar/directorio',[ContactosController::class,'buscarDirectorio'])->name('busqueda.comppleta');
+Route::post('/inicio/buscar/directorio/actualizado',[ContactosController::class,'buscarDirectorio'])->name('busqueda.completa');

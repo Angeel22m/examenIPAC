@@ -43,7 +43,7 @@
                             <h3 class="card-header">Buscar Entrada</h3>
                             <div class="card-body">
                                 <p class="card-text">
-                                <form action="{{route('busqueda.comppleta')}}" method="POST">
+                                <form action="{{route('busqueda.completa')}}" method="POST">
                                     @csrf
                                     <label for="">Correo</label>
                                     <input id="correo" class="form-control" name ="correo">

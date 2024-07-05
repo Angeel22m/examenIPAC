@@ -31,8 +31,8 @@ public function buscar(){
 return view('buscar');
 }
 
-public function buscarDirectorio(Request $email){
-$directorio = Directorio::where('correo', $email->correo);
+public function buscarDirectorio(Request $request){
+$directorio = Directorio::where('correo',$request->correo);
 
 return view('vercontactos',compact('directorio'));
 }
